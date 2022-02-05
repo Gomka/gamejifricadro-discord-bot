@@ -5,7 +5,7 @@ client.on('ready', () => {
     console.log(`Andamo ruleta`); // wea on bot ready
 });
 
-client.on('message', async msg => {
+client.on('message', msg => {
 
     if (msg.author.bot) return;
 
