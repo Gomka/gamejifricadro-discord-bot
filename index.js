@@ -16,7 +16,8 @@ client.on('message', async msg => {
     // hacer replies morongas
 
     if (msg.channelid == process.env.TARGET_CHANNEL) {
-        msg.channel.send("spotted");
+        console.log(`channel found`);
+        msg.channel.send("𝓮𝓷𝓳𝓸𝔂 𝔂𝓸𝓾𝓻 𝓶𝓮𝓪𝓵");
     }
 });
 
