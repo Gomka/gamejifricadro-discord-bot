@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  console.log(`Logged in...`); // wea on bot ready
+    console.log(`Logged in...`); // wea on bot ready
 });
 
-client.on('message', msg => {
+client.on('message', async msg => {
 
-    if (message.author.bot) return;
+    if (msg.author.bot) return;
 
     // mirar si los mensajes estan en un canal concreto
 
@@ -15,7 +15,7 @@ client.on('message', msg => {
 
     // hacer replies morongas
 
-  msg.reply('pong');
+    msg.reply('pong');
 });
 
 client.login(process.env.TOKEN);
