@@ -15,6 +15,18 @@ client.on('message', async msg => {
 
     // hacer replies morongas
 
+    var message = msg.content.toLowerCase();
+
+    switch (message) {
+        case message.startsWith("cum"):
+            msg.reply("Aweno");
+
+            break;
+
+        default:
+            break;
+    }
+
     msg.reply('pong');
 });
 
