@@ -28,7 +28,7 @@ client.on('message', async msg => {
             break;
     }
 
-    msg.reply('pong');
+    msg.channel.send('pong');
 });
 
 client.login(process.env.TOKEN);
