@@ -1,0 +1,31 @@
+{
+    "name": "gamejifricadro",
+    "description": "Gomka's gameja bot",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "async-limiter": "^2.0.0",
+      "discord": "^0.8.2",
+      "discord.js": "11.1.0",
+      "google-spreadsheet": "^3.1.15",
+      "googleapis": "^67.1.0",
+      "mysql": "^2.18.1",
+      "pg": "^8.5.1",
+      "request": "2.81.0",
+      "ultron": "^1.1.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Gomka/gamejifricadro-discord-bot"
+    },
+    "keywords": [],
+    "author": "Gomka",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Gomka/gamejifricadro-discord-bot/issues"
+    },
+    "homepage": "https://github.com/Gomka/gamejifricadro-discord-bot#readme"
+  }
