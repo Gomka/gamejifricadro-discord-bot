@@ -1,5 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fs = require('fs');
+const readline = require('readline');
+const { google } = require('googleapis');
 
 client.on('ready', () => {
     console.log(`Andamo ruleta`); // wea on bot ready
@@ -15,13 +18,15 @@ client.on('message', message => {
 
     // hacer replies morongas
 
+    messageLower = message.content.toLowerCase();
+
     if (message.channel.id == process.env.TARGET_CHANNEL) {
 
         // we add the message to a spreadsheet
         message.channel.send("spotted");
     };
 
-    if (message.content.toLowerCase().includes("de aqui a gameja") || message.content.toLowerCase().includes("de aquí a gameja")) {
+    if (messageLower.includes("de aqui a gameja") || messageLower.includes("de aquí a gameja")) {
         message.author.reply("De aquí a gameja.");
     }
 });
