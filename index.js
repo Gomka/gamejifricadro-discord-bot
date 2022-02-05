@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log(`Logged in...`); // wea on bot ready
+    console.log(`Andamo ruleta`); // wea on bot ready
 });
 
 client.on('message', async msg => {
@@ -15,20 +15,9 @@ client.on('message', async msg => {
 
     // hacer replies morongas
 
-    var messageLower = msg.content.toLowerCase();
-    var messageStringsLower = messageLower.trim().split(/ +/g);
-
-    switch (messageStringsLower[0]) {
-        case "cum":
-            msg.reply("Aweno");
-
-            break;
-
-        default:
-            break;
+    if (message.channel = process.env.TARGET_CHANNEL) {
+        message.channel.send("spotted");
     }
-
-    msg.channel.send('pong');
 });
 
 client.login(process.env.TOKEN);
