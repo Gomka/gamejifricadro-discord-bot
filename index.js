@@ -5,9 +5,9 @@ client.on('ready', () => {
     console.log(`Andamo ruleta`); // wea on bot ready
 });
 
-client.on('message', msg => {
+client.on('message', message => {
 
-    if (msg.author.bot) return;
+    if (message.author.bot) return;
 
     // mirar si los mensajes estan en un canal concreto
 
@@ -15,15 +15,20 @@ client.on('message', msg => {
 
     // hacer replies morongas
 
-    if (msg.channel.id == process.env.TARGET_CHANNEL) {
-        msg.channel.send("heroku id");
-    }
+    if (message.channel.id == process.env.TARGET_CHANNEL) {
 
-    if (msg.channel.id == 939601214709063750) {
-        msg.channel.send("hardcoded id");
-    }
+        // we add the message to a spreadsheet
+        message.channel.send("spotted");
+    };
 
-    msg.channel.send(msg);
+    switch (message.value) {
+        case "cum":
+            message.author.reply("Ya antojó");
+            break;
+
+        default:
+            break;
+    };
 });
 
 client.login(process.env.TOKEN);
