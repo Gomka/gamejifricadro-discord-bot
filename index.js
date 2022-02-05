@@ -15,7 +15,7 @@ client.on('message', message => {
 
     // hacer replies morongas
 
-    messageLower = message.content.toLowerCase();
+    var messageLower = message.content.toLowerCase();
 
     if (message.channel.id == process.env.TARGET_CHANNEL) {
 
