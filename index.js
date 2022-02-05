@@ -16,12 +16,12 @@ client.on('message', async msg => {
     // hacer replies morongas
 
 
-    if (msg.channelid == process.env.TARGET_CHANNEL) {
+    if (msg.channelId == process.env.TARGET_CHANNEL) {
         console.log(`channel found`);
         msg.channel.reply("𝓮𝓷𝓳𝓸𝔂 𝔂𝓸𝓾𝓻 𝓶𝓮𝓪𝓵");
     }
 
-    msg.channel.send(msg.channelid);
+    msg.channel.send(msg.channelId);
 });
 
 client.login(process.env.TOKEN);
