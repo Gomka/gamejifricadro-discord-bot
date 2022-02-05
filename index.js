@@ -15,7 +15,7 @@ client.on('message', async msg => {
 
     // hacer replies morongas
 
-    if (message.channel = process.env.TARGET_CHANNEL) {
+    if (message.channel.id == process.env.TARGET_CHANNEL) {
         message.channel.send("spotted");
     }
 });
