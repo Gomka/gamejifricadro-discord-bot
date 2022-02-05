@@ -23,7 +23,7 @@ client.on('message', message => {
         message.channel.send("spotted");
     };
 
-    if (messageLower.includes("de aqui a gameja") || messageLower.includes("de aquí a gameja")) {
+    if (messageLower.includes("gameja")) {
         message.author.reply("De aquí a gameja.");
     }
 });
