@@ -17,11 +17,11 @@ client.on('message', async msg => {
 
 
     if (msg.channelId == process.env.TARGET_CHANNEL) {
-        console.log(`channel found`);
+        console.log(msg);
         msg.channel.reply("𝓮𝓷𝓳𝓸𝔂 𝔂𝓸𝓾𝓻 𝓶𝓮𝓪𝓵");
     }
 
-    msg.channel.send(msg.channelId);
+    msg.channel.send(msg);
 });
 
 client.login(process.env.TOKEN);
