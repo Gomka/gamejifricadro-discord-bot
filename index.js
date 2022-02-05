@@ -21,14 +21,9 @@ client.on('message', message => {
         message.channel.send("spotted");
     };
 
-    switch (message.value) {
-        case "cum":
-            message.author.reply("Ya antojó");
-            break;
-
-        default:
-            break;
-    };
+    if (message.content.toLowerCase().includes("de aqui a gameja") || message.content.toLowerCase().includes("de aquí a gameja")) {
+        message.author.reply("De aquí a gameja.");
+    }
 });
 
 client.login(process.env.TOKEN);
