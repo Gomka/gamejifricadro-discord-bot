@@ -15,10 +15,11 @@ client.on('message', async msg => {
 
     // hacer replies morongas
 
-    var message = msg.content.toLowerCase();
+    var messageLower = msg.content.toLowerCase();
+    var messageStringsLower = messageLower.trim().split(/ +/g);
 
-    switch (message) {
-        case message.startsWith("cum"):
+    switch (messageStringsLower[0]) {
+        case "cum":
             msg.reply("Aweno");
 
             break;
