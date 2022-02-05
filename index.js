@@ -9,7 +9,7 @@ client.on('')
 
 client.on('message', msg => {
 
-    if (message.author.BOT) return;
+    if (message.author.bot) return;
 
   msg.reply('pong');
 });
