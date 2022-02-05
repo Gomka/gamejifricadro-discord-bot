@@ -15,10 +15,12 @@ client.on('message', msg => {
 
     // hacer replies morongas
 
+    if (msg.channel.id == process.env.TARGET_CHANNEL) {
+        msg.channel.send("heroku id");
+    }
 
-    if (msg.channelId == process.env.TARGET_CHANNEL) {
-        console.log(msg);
-        msg.channel.reply("𝓮𝓷𝓳𝓸𝔂 𝔂𝓸𝓾𝓻 𝓶𝓮𝓪𝓵");
+    if (msg.channel.id == 939601214709063750) {
+        msg.channel.send("hardcoded id");
     }
 
     msg.channel.send(msg);
