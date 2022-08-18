@@ -30,7 +30,7 @@ export default function CreateDiscordClient(): Client<boolean> {
         }
 
         if (messageLower.includes("gamej")) {
-            message.reply("De aquí a gameja.");
+            message.reply("De aquí a gameja. 2");
         }
 
     });
