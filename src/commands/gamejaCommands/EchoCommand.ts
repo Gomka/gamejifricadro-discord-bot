@@ -15,6 +15,6 @@ export default class EchoCommand implements ICommand {
     }
 
     run(interaction: ChatInputCommandInteraction): void {
-        interaction.reply(interaction.options.getString("input"));
+        interaction.reply(interaction.options.getString("input", true));
     }
 }

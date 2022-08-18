@@ -5,15 +5,15 @@ export default function DeployCommands() {
     const gamejaCommands = GetAllGamejaCommands.map(x => x.build().toJSON())
     const globalCommands = GetAllGlobalCommands.map(x => x.build().toJSON())
 
-    const rest = new REST().setToken(process.env.TOKEN)
+    const rest = new REST().setToken(process.env.TOKEN!)
     rest.put(
-        Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GAMEJA_GUILD_ID),
+        Routes.applicationGuildCommands("939584432107552789"!, "856900050722750474"!),
         { body: gamejaCommands })
         .then(() => console.log("succesfully registered commmands for Gameja"))
         .catch(console.error)
 
     rest.put(
-        Routes.applicationCommands(process.env.CLIENT_ID), { body: globalCommands })
+        Routes.applicationCommands("939584432107552789"!), { body: globalCommands })
         .then(() => console.log("succesfully registered global commmands"))
         .catch(console.error)
 }

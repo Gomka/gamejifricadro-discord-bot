@@ -1,10 +1,10 @@
 import errorHandler from "errorhandler";
 import app from "./App";
 import dotenv from "dotenv";
+import CreateDiscordClient from "./Server";
 
 dotenv.config();
-console.log(process.env.TEST_ENV_MZ);
-
+CreateDiscordClient();
 // /**
 //  * Error Handler. Provides full stack
 //  */
